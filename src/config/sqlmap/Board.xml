@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+
+	<!-- 게시물 목록 결과 맵 -->
+	<resultMap id="selectBoardListResultMap" class="example.domain.Board">
+		<result column="BOARD_SEQ" property="boardSeq" />
+		<result column="TITLE" property="title" />
+		<result column="REG_DATE" property="regDate" />
+	</resultMap>
+	
+	<!-- 게시물 목록 조회 쿼리 -->
+	<select id="selectBoardList" resultMap="selectBoardListResultMap">
+		SELECT
+			BOARD_SEQ,
+			TITLE,
+			REG_DATE
+		FROM T_BOARD
+		ORDER BY REG_DATE DESC
+	</select>
+
+</sqlMap>
