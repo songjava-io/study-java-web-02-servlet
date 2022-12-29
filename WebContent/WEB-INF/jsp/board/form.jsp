@@ -13,7 +13,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	</head>
 	<body>
-		<%@ include file="/common/header.jsp" %>
+		<%@ include file="/WEB-INF/jsp/common/header.jsp" %>
 <%
 	// 현재 페이지에 들어올 때 파라메터의 값을 boardSeq 변수에 담음.
 	String boardSeq = request.getParameter("boardSeq");

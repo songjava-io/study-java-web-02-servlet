@@ -4,6 +4,7 @@ public class Board {
 
 	private String boardSeq;
 	private String title;
+	private String contents;
 	private String regDate;
 	
 	public String getBoardSeq() {
@@ -23,5 +24,11 @@ public class Board {
 	}
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
+	}
+	public String getContents() {
+		return contents;
+	}
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 }

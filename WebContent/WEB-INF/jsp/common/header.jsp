@@ -12,10 +12,10 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/board/list.jsp">게시판</a>
+          <a class="nav-link" href="/board/list">게시판</a>
         </li>
       </ul>
-      <form action="/board/list.jsp" class="d-flex" role="search">
+      <form action="/board/list" class="d-flex" role="search">
         <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
