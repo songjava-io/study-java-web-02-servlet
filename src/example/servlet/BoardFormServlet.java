@@ -43,8 +43,6 @@ public class BoardFormServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		throws ServletException, IOException {
-		// 한글 깨짐 방지 인코딩 설정
-		request.setCharacterEncoding("UTF-8");
 		// 게시물 번호 변수로 받음
 		String boardSeq = request.getParameter("boardSeq");
 		// 제목 입력 받은 값 변수에 담음

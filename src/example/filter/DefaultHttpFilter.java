@@ -2,15 +2,17 @@ package example.filter;
 
 import java.io.IOException;
 
-import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpFilter;
 import javax.servlet.http.HttpServletRequest;
 
-public class DefaultHttpFilter implements Filter {
+public class DefaultHttpFilter extends HttpFilter {
+
+	private static final long serialVersionUID = -5218718033835675593L;
 
 	@Override
 	public void destroy() {
