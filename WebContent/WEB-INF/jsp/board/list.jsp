@@ -10,6 +10,9 @@
 	</head>
 	<body>
 		<%@ include file="/WEB-INF/jsp/common/header.jsp" %>
+		<h2>로그인 이름 : ${sessionScope.LOGIN_USER.userName}</h2>
+		<a href="/login">세션 로그인하기</a>
+		<a href="/logout">세션 로그아웃</a>
 		<table class="table">
 			<thead>
 				<tr>

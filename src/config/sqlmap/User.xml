@@ -6,14 +6,16 @@
 
 	<resultMap id="selectUserResultMap" class="example.domain.User">
 		<result column="USER_ID" property="userId" />
+		<result column="USER_NAME" property="userName" />
 		<result column="JOIN_DATE" property="joinDate" />
 	</resultMap>	
 	
 	<!-- 회원 조회 쿼리 -->
-	<select id="selectUser" parameterClass="java.lang.String"
+	<select id="selectUser" parameterClass="example.domain.User"
 		 resultMap="selectUserResultMap">
 		SELECT
 			USER_ID,
+			USER_NAME,
 			JOIN_DATE
 		FROM T_USER
 		WHERE USER_ID = #userId#

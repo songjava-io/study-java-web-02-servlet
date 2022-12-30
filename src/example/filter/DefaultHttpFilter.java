@@ -8,6 +8,7 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 public class DefaultHttpFilter implements Filter {
 
@@ -22,7 +23,9 @@ public class DefaultHttpFilter implements Filter {
 		String query = request.getParameter("query");
 		System.out.println("DefaultHttpFilter doFilter query : " + query);
 		
-		request.setCharacterEncoding("UTF-8");
+		HttpServletRequest r = (HttpServletRequest) request;
+		
+		System.out.println("sessionId : " + r.getSession().getId());
 		
 		chain.doFilter(request, response);
 		/*

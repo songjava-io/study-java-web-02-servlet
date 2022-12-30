@@ -51,6 +51,8 @@ public class BoardFormServlet extends HttpServlet {
 		String title = request.getParameter("title");
 		// 내용
 		String contents = request.getParameter("contents");
+		System.out.println("title : " + title);
+		System.out.println("contents : " + contents);
 		// 검증
 		boolean validate = true;
 		// 성공여부

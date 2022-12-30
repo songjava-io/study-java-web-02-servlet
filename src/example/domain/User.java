@@ -4,6 +4,7 @@ public class User {
 
 	private int userSeq;
 	private String userId;
+	private String userName;
 	private String password;
 	private String joinDate;
 	
@@ -30,6 +31,12 @@ public class User {
 	}
 	public void setJoinDate(String joinDate) {
 		this.joinDate = joinDate;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
 }

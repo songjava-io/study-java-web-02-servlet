@@ -53,9 +53,12 @@ public class LoginServlet extends HttpServlet {
 			User user = new User();
 			user.setUserId(id);
 			user.setPassword(password);
+			System.out.println("id : " + id);
+			System.out.println("password : " + password);
 			try {
 				// 실제 DB에 존재하는 회원 조회
 				User selectUser = userService.selectUser(user);
+				System.out.println("selectUser : " + selectUser);
 				// 회원이 존재하면
 				if (selectUser != null) {
 					// 세션에 로그인 회원 정보를 기억시킨다.

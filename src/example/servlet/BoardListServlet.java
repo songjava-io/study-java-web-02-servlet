@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import example.domain.Board;
+import example.domain.User;
 import example.service.BoardService;
 
 public class BoardListServlet extends HttpServlet {
@@ -24,6 +25,13 @@ public class BoardListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, 
 		HttpServletResponse resp) throws ServletException, IOException {
 		try {
+			
+			User loginUser = (User) req.getSession().getAttribute("LOGIN_USER");
+			
+			if (loginUser != null) {
+				System.out.println("loginUserName : " + loginUser.getUserName());
+			}
+			
 			// 검색조건 파라메터
 			String query = req.getParameter("query");
 			
