@@ -17,6 +17,7 @@
 	
 	<!-- Board.xml 사용하기 위한 설정 -->
 	<sqlMap resource="./config/sqlmap/Board.xml"/>
+	<sqlMap resource="./config/sqlmap/User.xml"/>
 	
 	
 </sqlMapConfig>

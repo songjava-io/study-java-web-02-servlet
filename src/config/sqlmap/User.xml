@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+
+	<resultMap id="selectUserResultMap" class="example.domain.User">
+		<result column="USER_ID" property="userId" />
+		<result column="JOIN_DATE" property="joinDate" />
+	</resultMap>	
+	
+	<!-- 회원 조회 쿼리 -->
+	<select id="selectUser" parameterClass="java.lang.String"
+		 resultMap="selectUserResultMap">
+		SELECT
+			USER_ID,
+			JOIN_DATE
+		FROM T_USER
+		WHERE USER_ID = #userId#
+		AND PASSWORD = #password#
+	</select>
+	
+
+</sqlMap>

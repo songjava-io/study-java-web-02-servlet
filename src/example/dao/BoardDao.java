@@ -39,4 +39,34 @@ public class BoardDao {
 			.queryForObject("selectBoard", boardSeq);
 	}
 	
+	/**
+	 * 게시물 등록
+	 * @param board
+	 * @throws SQLException
+	 */
+	public void insertBoard(Board board) throws SQLException  {
+		BaseSqlMapConfig.getInstance()
+			.insert("insertBoard", board);
+	}
+	
+	/**
+	 * 게시물 업데이트
+	 * @param board
+	 * @throws SQLException
+	 */
+	public void updateBoard(Board board) throws SQLException  {
+		BaseSqlMapConfig.getInstance()
+			.update("updateBoard", board);
+	}
+	
+	/**
+	 * 게시물 삭제
+	 * @param board
+	 * @throws SQLException
+	 */
+	public void deleteBoard(int boardSeq) throws SQLException  {
+		BaseSqlMapConfig.getInstance()
+			.update("deleteBoard", boardSeq);
+	}
+	
 }

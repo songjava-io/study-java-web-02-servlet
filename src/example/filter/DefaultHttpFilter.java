@@ -21,6 +21,9 @@ public class DefaultHttpFilter implements Filter {
 			throws IOException, ServletException {
 		String query = request.getParameter("query");
 		System.out.println("DefaultHttpFilter doFilter query : " + query);
+		
+		request.setCharacterEncoding("UTF-8");
+		
 		chain.doFilter(request, response);
 		/*
 		response.getWriter().write("Spring Test");

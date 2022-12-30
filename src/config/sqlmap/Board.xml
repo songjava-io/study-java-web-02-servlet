@@ -43,6 +43,41 @@
 			REG_DATE
 		FROM T_BOARD
 		WHERE BOARD_SEQ = #boardSeq#
-	</select>	
+	</select>
+	
+	<insert id="insertBoard">
+		INSERT INTO T_BOARD
+		(
+			TITLE,
+			CONTENTS,
+			REG_DATE
+		)
+		VALUES
+		(
+			#title#,
+			#contents#,
+			NOW()
+		)
+	</insert>
+	
+	<update id="updateBoard">
+		UPDATE T_BOARD
+		SET
+			TITLE = #title#,
+			CONTENTS = #contents#
+		WHERE BOARD_SEQ = #boardSeq#
+	</update>
+	
+	<delete id="deleteBoard">
+		DELETE FROM T_BOARD
+		WHERE BOARD_SEQ = #boardSeq#
+	</delete>
+	
+	
+	
+	
+	
+	
+		
 
 </sqlMap>

@@ -24,4 +24,26 @@ public class BoardService {
 		return boardDao.selectBoard(boardSeq);
 	}
 	
+	/**
+	 * 게시물 등록/업데이트 처리
+	 * @param board
+	 * @throws SQLException
+	 */
+	public boolean save(Board board) throws SQLException {
+		// 게시물 번호로 조회하여 데이가 있는지
+		Board selectBoard = selectBoard(board.getBoardSeq());
+		// 데이터가 없는경우
+		if (selectBoard == null) {
+			// 게시물 등록 쿼리 수행
+			boardDao.insertBoard(board);
+			return true;
+		}
+		// 게시물 업데이트 쿼리 수행
+		boardDao.updateBoard(board);
+		return false;
+	}
+	
+	
+	
+	
 }
